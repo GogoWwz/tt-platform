@@ -1,0 +1,12 @@
+.command {
+  display: flex;
+  flex-shrink: 0;
+  width: 430px;
+  height: 100%;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.command-list > * {
+  word-break: break-all;
+}
