@@ -1,46 +1,23 @@
-# Getting Started with Create React App
+# 背景
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+作为一个前端开发工程师，从接触前端开始，学习就从未停歇。  
 
-## Available Scripts
+但是几年下来，越发觉得很多知识 或者 Best Practice，仅在文章中表达，无法 Try it Yourself，真的非常难受  
 
-In the project directory, you can run:
+虽然说有codepen之类的在线ide，但是很多时候还是满足一些比较简单的场景，一些Best Practice 还是不是很满足的  
 
-### `yarn start`
+所以这个项目希望能从自己出发，将前端所学习到的知识通过搭建环境的方式，前端er 在 Read 的时候，同时可以Debugger，这样对知识本身的理解也是很有帮助的
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 架构思路
 
-### `yarn test`
+大致的想法很简单：
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 首页作为各个知识的集散中心仅仅作为入口
 
-### `yarn build`
+- 各个入口之间不管是前端应用 还是 后端服务 都应该是分布式解耦的
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 所以很明显需要采用微前端 + 微服务的架构方式
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+微前端采用的框架就是用 qiankun，
+node 的微服务 暂时还没有了解，但思路肯定是这样的方式
